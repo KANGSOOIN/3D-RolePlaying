@@ -9,6 +9,7 @@ public class PlayerAttacker : MonoBehaviour
 
 	[SerializeField] bool debug;
 
+	[SerializeField] Weapon weapon;
 	[SerializeField] int damage;
 	[SerializeField] float range;
 	[SerializeField, Range(0,360)] float angle;
@@ -28,6 +29,19 @@ public class PlayerAttacker : MonoBehaviour
 	private void OnAttack(InputValue value)
 	{
 		Attack();
+	}
+
+	public void StartAttack()
+	{
+		weapon.EnableWeapon();
+		Debug.Log("공격 시작");
+
+	}
+
+	public void EndAttack()
+	{
+		weapon.DisableWeapon();
+		Debug.Log("공격 끝");
 	}
 
 	// 범위 공격

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IHittable
-{ 
-    public void TakeHit(int damage)
-    { 
-        
-    }
+{
+    public void TakeHit(int damage);
 }

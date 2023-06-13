@@ -8,6 +8,11 @@ public class Weapon : MonoBehaviour
 
 	Collider coll;
 
+	private void Awake()
+	{
+		coll = GetComponent<Collider>();
+	}
+
 	public void EnableWeapon()
 	{
 		coll.enabled = true;
@@ -21,6 +26,6 @@ public class Weapon : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		IHittable hittable = other.GetComponent<IHittable>();
-		hittable?.TakeHit(1);
+		hittable?.TakeHit(damage);
 	}
 }
