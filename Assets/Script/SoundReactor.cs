@@ -8,5 +8,4 @@ public class SoundReactor : MonoBehaviour, IListenable
 	{
 		transform.LookAt(trans.position);
 	}
-
 }
